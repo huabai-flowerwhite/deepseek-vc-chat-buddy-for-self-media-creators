@@ -1,0 +1,233 @@
+{
+  "name": "ai-chat-buddy",
+  "displayName": "deepseek-vc-chat buddy for self-media creators - 自媒体创作者的deepseek-vscode聊天搭子",
+  "description": "把每一条内容变成可校准的实验——AI选题→打分预测→发布→数据回收→复盘→升级评分公式。",
+  "version": "0.1.0",
+  "publisher": "ai-chat-buddy",
+  "license": "MIT",
+  "icon": "resources/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Data Science"
+  ],
+  "keywords": [
+    "content creator",
+    "calibration",
+    "prediction",
+    "rubric",
+    "AI",
+    "douyin",
+    "bilibili",
+    "youtube"
+  ],
+  "activationEvents": [
+    "onView:ai-chat-buddy.statusView",
+    "onCommand:ai-chat-buddy.init",
+    "onCommand:ai-chat-buddy.status",
+    "onCommand:ai-chat-buddy.score",
+    "onCommand:ai-chat-buddy.predict",
+    "onCommand:ai-chat-buddy.shoot",
+    "onCommand:ai-chat-buddy.publish",
+    "onCommand:ai-chat-buddy.retro",
+    "onCommand:ai-chat-buddy.learnFrom",
+    "onCommand:ai-chat-buddy.seed",
+    "onCommand:ai-chat-buddy.trends",
+    "onCommand:ai-chat-buddy.recommend",
+    "onCommand:ai-chat-buddy.persona",
+    "onCommand:ai-chat-buddy.bump",
+    "onCommand:ai-chat-buddy.migrate",
+    "onCommand:ai-chat-buddy.quickScore",
+    "onCommand:ai-chat-buddy.openWorkflow"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ai-chat-buddy.init",
+        "title": "初始化 ai-chat-buddy",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.status",
+        "title": "查看状态看板",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.score",
+        "title": "给脚本打分 (cheat-score)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.predict",
+        "title": "启动盲预测 (cheat-predict)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.shoot",
+        "title": "登记已拍摄 (cheat-shoot)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.publish",
+        "title": "登记已发布 (cheat-publish)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.retro",
+        "title": "数据复盘 (cheat-retro)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.learnFrom",
+        "title": "对标账号学习 (cheat-learn-from)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.seed",
+        "title": "选题对话 (cheat-seed)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.trends",
+        "title": "抓取热点 (cheat-trends)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.recommend",
+        "title": "推荐选题 (cheat-recommend)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.persona",
+        "title": "受众画像 (cheat-persona)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.bump",
+        "title": "升级评分公式 (cheat-bump)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.migrate",
+        "title": "迁移 State 版本 (cheat-migrate)",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.quickScore",
+        "title": "快速打分（当前脚本）",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      },
+      {
+        "command": "ai-chat-buddy.openWorkflow",
+        "title": "打开工作流速查",
+        "category": "deepseek-vc-chat buddy for self-media creators"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ai-chat-buddy-sidebar",
+          "title": "deepseek-vc-chat buddy for self-media creators",
+          "icon": "$(graph-scatter)"
+        }
+      ]
+    },
+    "views": {
+      "ai-chat-buddy-sidebar": [
+        {
+          "id": "ai-chat-buddy.statusView",
+          "name": "状态看板"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "ai-chat-buddy.status",
+          "when": "view == ai-chat-buddy.statusView",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "ai-chat-buddy.score",
+          "when": "resourceExtname == .md",
+          "group": "ai-chat-buddy"
+        },
+        {
+          "command": "ai-chat-buddy.predict",
+          "when": "resourceExtname == .md",
+          "group": "ai-chat-buddy"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "ai-chat-buddy.score",
+          "when": "resourceExtname == .md",
+          "group": "ai-chat-buddy@1"
+        },
+        {
+          "command": "ai-chat-buddy.predict",
+          "when": "resourceExtname == .md",
+          "group": "ai-chat-buddy@2"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "deepseek-vc-chat buddy for self-media creators",
+      "properties": {
+        "ai-chat-buddy.dataLayer": {
+          "type": "string",
+          "enum": ["markdown", "sqlite"],
+          "default": "markdown",
+          "description": "数据存储层"
+        },
+        "ai-chat-buddy.defaultContentForm": {
+          "type": "string",
+          "enum": ["opinion-video", "long-essay", "short-text", "podcast"],
+          "default": "opinion-video",
+          "description": "默认内容形态"
+        },
+        "ai-chat-buddy.enabledTrendSources": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": ["manual-paste"],
+          "description": "启用的热点源"
+        },
+        "ai-chat-buddy.enabledPerfAdapters": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": [],
+          "description": "启用的数据适配器"
+        },
+        "ai-chat-buddy.blindScoring": {
+          "type": "boolean",
+          "default": true,
+          "description": "是否启用盲打分（channel B 隔离）"
+        },
+        "ai-chat-buddy.retroWindowDays": {
+          "type": "number",
+          "default": 3,
+          "description": "复盘数据回收窗口（天）"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.0"
+  }
+}
