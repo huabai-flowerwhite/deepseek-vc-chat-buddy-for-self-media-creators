@@ -41,7 +41,7 @@ export async function cheatLearnFrom(stateService: StateService): Promise<void> 
         `4. 更新 script_patterns.md（沉淀可复用的写作结构）`,
         `5. 评估是否需要更新 rubric_notes.md 的评分维度`,
         ``,
-        `我会粘贴 5-10 条该账号的脚本或数据供你分析。`,
+        `你搜索 5-10 条该账号的脚本或数据以便分析。`,
     ].join('\n');
 
     await vscode.commands.executeCommand('workbench.action.chat.open', { query });
