@@ -103,7 +103,7 @@ code .
 
 方法二：
 
-命令Copilot根据网址下载项目、下载后命令Copilot编译，F5 启动扩展。
+打开vs code，集成api后，命令Copilot根据网址下载项目、下载后命令Copilot编译，F5 启动扩展。
 
 # 🎯详细操作：
 
