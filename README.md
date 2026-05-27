@@ -43,7 +43,7 @@ AI会让技术平权，我想让应用平权。
 # ✨本项目的优势
 内容创作：免去选题、写稿过程，让创作者更多时间提升内容展示能力（视频图片展示）。
 
-低成本：在48M deepseek-v4 pro tokens的测试中，输入缓存命中：输入缓存未命中大概是xx，能够满足内容创作低成本大量制作的需求。
+低成本：在48M deepseek-v4 pro tokens的测试中，输入缓存命中率约97.5%，能够满足内容创作低成本大量制作的需求。
 
 低门槛：仅通过vs code、deepseek-v4-pro api、deepseek v4 for copilot chat 扩展即可，Windows系统可用。
 
