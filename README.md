@@ -48,7 +48,8 @@ AI会让技术平权，我想让应用平权。
 ---
 
 # 🎬核心工作流：
-命令Copilot根据网址下载项目、下载后命令Copilot编译。
+
+下载后编译运行。
 
 cheatInit：初始化。选择内容形态，创建核心 md、ts文件 + 目录。
 
@@ -76,9 +77,35 @@ cheatBump：升级评分公式。完整 Rubric 升级 / 仅重校 Bucket。
 
 ---
 
+# 📦 安装
+
+方法一：
+
+1. 克隆项目到本地:
+
+git clone https://github.com/huabai-flowerwhite/deepseek-vc-chat-buddy-for-self-media-creators.git
+
+2. 进入项目目录:
+
+cd deepseek-vc-chat-buddy-for-self-media-creators
+
+3. 使用 VS Code 打开:
+
+code .
+
+4. 编译、F5 启动扩展:
+
+弹出新窗口即安装成功！
+
+……
+
+方法二：
+
+命令Copilot根据网址下载项目、下载后命令Copilot编译，F5 启动扩展。
+
 # 🎯详细操作：
+
 🔧 第一步：启动扩展
-命令Copilot根据网址下载项目、下载后命令Copilot编译。
 
 在当前 VS Code 窗口按 F5 运行调试，会弹出一个新的 VS Code 窗口。
 
